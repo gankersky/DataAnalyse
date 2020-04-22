@@ -1,0 +1,31 @@
+import math
+
+def distance():
+	p1_x,p1_y = 0,0
+	p2_x,p2_y = 3,4
+
+	disTan = math.sqrt((p2_x-p1_x)**2 + (p2_y-p1_y)**2)
+	print(disTan)
+
+def e_distance():
+	def eucliDist(A,B):
+		return math.sqrt(sum([(a-b)**2 for (a,b) in zip(A,B)]))
+	X=[1,2,3,4]
+	Y=[0,1,2,3]
+	print(eucliDist(X,Y))
+
+def e_dist():
+	import numpy as np
+
+	def eucliDist(A,B):
+		return np.sqrt(sum(np.power((A - B),2)))
+	X = np.array([1,2,3,4])
+	Y = np.array([0,1,2,3])
+	print(eucliDist(X,Y))
+e_distance()
+e_dist()
+a = [1,2,3]
+b = [4,5,6]
+c = [4,5,6,7,8]
+
+print(list(zip(a,b))) #zip 为对象，需转换为列表进行显示
